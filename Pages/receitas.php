@@ -2,6 +2,7 @@
 require_once '../config/db.php';
 require_once '../classes/Database.php';
 require_once '../classes/Receita.php';
+require_once '../classes/Utilizador.php';
 
 $receitaObj = new Receita();
 $receitas = $receitaObj->listarTodas();
@@ -21,6 +22,14 @@ $receitas = $receitaObj->listarTodas();
         <input type="text" id="pesquisaReceita" 
                placeholder="Pesquisar por bolo, cookies, brigadeiro..."
                class="form-control mb-4">
+
+               <?php if (Utilizador::estaLogado()): ?>
+    <div class="text-end mb-4">
+        <a href="<?= BASE_URL ?>Pages/admin/adicionar_receita.php" class="btn-simpa">
+            <i class="fa-solid fa-plus me-2"></i>Adicionar Receita
+        </a>
+    </div>
+<?php endif; ?>
 
         <div id="listaReceitas" class="row g-4">
 

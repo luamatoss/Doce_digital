@@ -857,3 +857,6 @@ header img {
   color: var(--marrom);
   font-family: Georgia, serif;
 }
+main a {
+  color: #8b5a4a;
+}

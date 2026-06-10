@@ -1,32 +1,3 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simpa Baker</title>
-
-    <!-- FAVICON -->
-    <link rel="icon" type="image/x-icon" href="../Assets/Imagens/Icones/favicon.png">
-
-    <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-    <!-- GOOGLE FONTS -->
-
-    <!-- BOOTSTRAP ICONS -->
-
-    <!-- MEU CSS -->
-    <link rel="stylesheet" href="../Assets/CSS/style.css">
-
-</head>
-
-<body class="d-flex flex-column min-vh-100">
 <?php require_once '../componentes/header.php'; ?>
 
     <main>
@@ -36,7 +7,7 @@
                 <h1>O meu livro de receitas <em>especiais</em></h1>
                 <p>Este é o meu cantinho doce, onde guardo e partilho receitas que fazem parte da minha história, aquelas que marcaram momentos especiais e que continuam a trazer conforto em cada preparo.</p>
                 <p>Simples, prático e sempre disponível.</p>
-                <a href="receitas.html" class="btn btn-simpa" style="margin-top:1rem;">Ver Receitas</a>
+                <a href="<?= BASE_URL ?>Pages/receitas.php" class="btn btn-custom mt-3">Ver receitas</a>
             </div>
             <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Baker" />
         </section>

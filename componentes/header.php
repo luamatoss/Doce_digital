@@ -3,6 +3,7 @@ require_once __DIR__ . '/../config/db.php';
 require_once __DIR__ . '/../classes/Database.php';
 require_once __DIR__ . '/../classes/Utilizador.php';
 ?>
+<?php $paginaAtual = basename($_SERVER['PHP_SELF']); ?>
 
 <!doctype html>
 <html lang="pt">
@@ -45,23 +46,29 @@ require_once __DIR__ . '/../classes/Utilizador.php';
 
                 <!-- Links -->
                 <li class="nav-item">
-                    <a class="nav-link active" href="<?= BASE_URL ?>index.php">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"  href="<?= BASE_URL ?>Pages/sobre_nos.php">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL ?>Pages/receitas.php">Receitas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL ?>Pages/videos.php">Tutoriais</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL ?>Pages/receita-da-semana.php">Receita da semana</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL ?>Pages/contactos.php">Contacto</a>
-                </li>
+    <a class="nav-link <?= $paginaAtual == 'index.php' ? 'active' : '' ?>" 
+       href="<?= BASE_URL ?>index.php">Home</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link <?= $paginaAtual == 'sobre_nos.php' ? 'active' : '' ?>" 
+       href="<?= BASE_URL ?>Pages/sobre_nos.php">Sobre</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link <?= $paginaAtual == 'receitas.php' ? 'active' : '' ?>" 
+       href="<?= BASE_URL ?>Pages/receitas.php">Receitas</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link <?= $paginaAtual == 'videos.php' ? 'active' : '' ?>" 
+       href="<?= BASE_URL ?>Pages/videos.php">Tutoriais</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link <?= $paginaAtual == 'receita-da-semana.php' ? 'active' : '' ?>" 
+       href="<?= BASE_URL ?>Pages/receita-da-semana.php">Receita da semana</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link <?= $paginaAtual == 'contactos.php' ? 'active' : '' ?>" 
+       href="<?= BASE_URL ?>Pages/contactos.php">Contacto</a>
+</li>
                 <?php if (Utilizador::estaLogado()) { ?>
     <li class="nav-item">
         <a class="nav-link" href="<?= BASE_URL ?>Pages/logout.php">Logout</a>
